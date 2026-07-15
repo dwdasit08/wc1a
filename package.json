@@ -1,0 +1,25 @@
+{
+  "name": "wcia-website",
+  "version": "1.0.0",
+  "description": "Wheelchair Cricket India Association official website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "nodemailer": "^6.9.5",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1"
+  }
+}

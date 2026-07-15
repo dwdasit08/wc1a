@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Online | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .payment-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; margin: 40px 0; }
+        .payment-options .option { background: rgba(255,255,255,0.04); border-radius: var(--radius); padding: 30px; text-align: center; border: 1px solid rgba(255,255,255,0.06); transition: var(--transition); }
+        .payment-options .option:hover { border-color: var(--gold); transform: translateY(-4px); }
+        .payment-options .option i { font-size: 3rem; color: var(--gold); }
+        .payment-options .option h4 { color: var(--white); margin: 12px 0 4px; }
+        .payment-options .option p { color: var(--text-muted); font-size: 0.9rem; }
+        .upi-box { background: rgba(255,255,255,0.03); border-radius: var(--radius); padding: 30px; border: 1px solid rgba(255,255,255,0.06); margin-top: 30px; text-align: center; }
+        .upi-box .upi-id { font-size: 1.6rem; color: var(--gold); font-weight: 700; letter-spacing: 1px; background: rgba(0,0,0,0.3); padding: 12px 24px; border-radius: 50px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="section-padding" style="background:var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Pay <span class="highlight">Online</span></h2>
+            <p class="section-subtitle">Support WCIA by making a quick payment. Your contribution fuels the movement.</p>
+
+            <div class="payment-options">
+                <div class="option"><i class="fas fa-credit-card"></i><h4>Credit / Debit Card</h4><p>Secure payment via Razorpay</p></div>
+                <div class="option"><i class="fab fa-google-pay"></i><h4>Google Pay</h4><p>Scan QR or UPI</p></div>
+                <div class="option"><i class="fab fa-paypal"></i><h4>PayPal</h4><p>International transfers</p></div>
+                <div class="option"><i class="fas fa-qrcode"></i><h4>QR Code</h4><p>Scan with any UPI app</p></div>
+            </div>
+
+            <div class="upi-box">
+                <p style="color:var(--text-muted);">Pay via UPI</p>
+                <div class="upi-id">wcia@upi</div>
+                <p style="color:var(--text-muted); margin-top:12px;">For other payment methods, please contact <a href="mailto:office@wcia.tv">office@wcia.tv</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

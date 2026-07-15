@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .form-container { max-width: 700px; margin: 40px auto; background: rgba(255,255,255,0.04); padding: 40px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06); }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; transition: var(--transition); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.08); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-group .btn { width: 100%; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="section-padding" style="background:var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Player <span class="highlight">Registration</span></h2>
+            <p class="section-subtitle">Fill in the form to register as a player or volunteer with WCIA.</p>
+            <div class="form-container">
+                <form id="registrationForm" onsubmit="handleRegistration(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="+91 9876543210" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" placeholder="Your state" />
+                    </div>
+                    <div class="form-group">
+                        <label for="role">I want to register as</label>
+                        <select id="role">
+                            <option value="player">Player</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="coach">Coach</option>
+                            <option value="supporter">Supporter</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" placeholder="Any special requests or information..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Submit Registration</button>
+                    </div>
+                </form>
+                <div id="regResponse" style="margin-top:20px; text-align:center;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script>
+        async function handleRegistration(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                fullName: form.fullName.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                state: form.state.value,
+                role: form.role.value,
+                message: form.message.value
+            };
+            const result = await window.submitForm('/api/contact', data);
+            const respDiv = document.getElementById('regResponse');
+            if (result.success) {
+                respDiv.innerHTML = '<span style="color:var(--gold);"><i class="fas fa-check-circle"></i> Registration submitted successfully! We\'ll contact you soon.</span>';
+                form.reset();
+            } else {
+                respDiv.innerHTML = '<span style="color:var(--accent);"><i class="fas fa-exclamation-circle"></i> ' + (result.error || 'Something went wrong. Please try again.') + '</span>';
+            }
+        }
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

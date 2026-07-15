@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  wcia-web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Add email env vars if needed
+    restart: unless-stopped

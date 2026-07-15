@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .donate-container { max-width: 700px; margin: 40px auto; background: rgba(255,255,255,0.04); padding: 40px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06); }
+        .donate-container .form-group { margin-bottom: 20px; }
+        .donate-container .form-group label { display: block; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+        .donate-container .form-group input, .donate-container .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; }
+        .donate-container .form-group input:focus, .donate-container .form-group textarea:focus { border-color: var(--gold); }
+        .donate-container .form-group .btn { width: 100%; }
+        #donateResponse { margin-top: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="section-padding" style="background:var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Donate <span class="highlight">Now</span></h2>
+            <p class="section-subtitle">Your generous donation helps us empower more lives through cricket.</p>
+            <div class="donate-container">
+                <form id="donateForm" onsubmit="handleDonation(event)">
+                    <div class="form-group">
+                        <label for="donorName">Full Name *</label>
+                        <input type="text" id="donorName" placeholder="Your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Email *</label>
+                        <input type="email" id="donorEmail" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="donorAmount">Amount (₹) *</label>
+                        <input type="number" id="donorAmount" placeholder="e.g., 1000" required min="1" />
+                    </div>
+                    <div class="form-group">
+                        <label for="donorMessage">Message (optional)</label>
+                        <textarea id="donorMessage" placeholder="Any special instructions or dedication..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-gold"><i class="fas fa-donate"></i> Donate</button>
+                    </div>
+                </form>
+                <div id="donateResponse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script>
+        async function handleDonation(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                name: form.donorName.value,
+                email: form.donorEmail.value,
+                amount: form.donorAmount.value,
+                message: form.donorMessage.value
+            };
+            const result = await window.submitForm('/api/donate', data);
+            const resp = document.getElementById('donateResponse');
+            if (result.success) {
+                resp.innerHTML = '<span style="color:var(--gold);"><i class="fas fa-check-circle"></i> Thank you for your donation! We will contact you shortly.</span>';
+                form.reset();
+            } else {
+                resp.innerHTML = '<span style="color:var(--accent);"><i class="fas fa-exclamation-circle"></i> ' + (result.error || 'Error. Please try again.') + '</span>';
+            }
+        }
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

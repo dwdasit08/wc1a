@@ -1,0 +1,1980 @@
+\<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHEELCHAIR CRICKET INDIA ASSOCIATION</title>
+    <meta name="description" content="WCIA is an 80G-approved non-profit that formed Indian wheelchair cricket team. Active in 20+ states with 1000+ players." />
+    <link rel="canonical" href="https://wcia.tv/" />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* ============================================================
+               RESET & BASE
+            ============================================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a1628;
+            --primary-light: #142c4a;
+            --primary-dark: #050d1a;
+            --secondary: #1a2a4a;
+            --accent: #e8491d;
+            --accent-hover: #c73a14;
+            --gold: #f5a623;
+            --gold-light: #ffd700;
+            --white: #ffffff;
+            --light-gray: #f0f4f8;
+            --mid-gray: #b8c6d4;
+            --dark-gray: #4a5a6a;
+            --text-light: #e8edf2;
+            --text-muted: #8899aa;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --radius-lg: 24px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-primary: 'Titillium Web', 'Roboto', sans-serif;
+            --font-secondary: 'Open Sans', 'Roboto', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        a:hover {
+            color: var(--gold);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-title .highlight {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 48px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-primary);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(232, 73, 29, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(232, 73, 29, 0.5);
+            color: var(--white);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), #d4890a);
+            color: var(--primary-dark);
+            box-shadow: 0 4px 20px rgba(245, 166, 35, 0.35);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(245, 166, 35, 0.5);
+            color: var(--primary-dark);
+        }
+
+        /* ============================================================
+               TOP BAR
+            ============================================================ */
+        .top-bar {
+            background: linear-gradient(135deg, #050d1a, #0f2440);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 1001;
+        }
+        .top-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-bar-left {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+        .top-bar-left a {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .top-bar-left a:hover {
+            color: var(--gold);
+        }
+        .top-bar-left a i {
+            color: var(--accent);
+            width: 16px;
+            text-align: center;
+        }
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .top-bar-right .social-link {
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: var(--transition);
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .top-bar-right .social-link:hover {
+            color: var(--gold);
+            background: rgba(245, 166, 35, 0.15);
+            transform: translateY(-2px);
+        }
+        .top-bar-right .live-btn {
+            background: linear-gradient(135deg, var(--accent), #c0392b);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulse-btn 2s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar-right .live-btn i {
+            font-size: 0.7rem;
+        }
+        .top-bar-right .live-btn:hover {
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse-btn {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(232, 73, 29, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(232, 73, 29, 0);
+            }
+        }
+
+        /* ============================================================
+               HEADER / NAV
+            ============================================================ */
+        .main-header {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .main-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+        }
+        .main-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+        .main-header .logo img {
+            height: 58px;
+            width: auto;
+            filter: drop-shadow(0 0 12px rgba(245, 166, 35, 0.2));
+            transition: var(--transition);
+        }
+        .main-header .logo img:hover {
+            filter: drop-shadow(0 0 24px rgba(245, 166, 35, 0.4));
+            transform: scale(1.02);
+        }
+        .main-header .logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        .main-header .logo-text span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .main-nav ul li {
+            position: relative;
+        }
+        .main-nav ul li a {
+            color: var(--text-light);
+            padding: 10px 18px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: var(--gold);
+            background: rgba(245, 166, 35, 0.08);
+        }
+        .main-nav ul li a i {
+            font-size: 0.7rem;
+            margin-left: 4px;
+            transition: var(--transition);
+        }
+        .main-nav ul li:hover>a i {
+            transform: rotate(180deg);
+        }
+
+        /* Dropdown */
+        .main-nav ul li .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            padding: 10px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            z-index: 100;
+        }
+        .main-nav ul li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .main-nav ul li .dropdown li a {
+            padding: 10px 22px;
+            font-weight: 400;
+            font-size: 0.85rem;
+            border-radius: 0;
+            color: var(--text-muted);
+            border-left: 3px solid transparent;
+        }
+        .main-nav ul li .dropdown li a:hover {
+            color: var(--gold);
+            background: rgba(245, 166, 35, 0.05);
+            border-left-color: var(--gold);
+        }
+
+        .main-nav .donate-btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: var(--white) !important;
+            padding: 10px 28px !important;
+            border-radius: 50px !important;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(232, 73, 29, 0.3);
+            margin-left: 8px;
+        }
+        .main-nav .donate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(232, 73, 29, 0.5);
+            background: linear-gradient(135deg, #f55a2a, #d43a1a);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 4px;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* ============================================================
+               HERO / VIDEO BANNER
+            ============================================================ */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--primary-dark);
+        }
+        .hero video,
+        .hero .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(5, 13, 26, 0.85) 0%, rgba(10, 22, 40, 0.6) 50%, rgba(5, 13, 26, 0.85) 100%);
+            z-index: 1;
+        }
+        .hero .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px 24px;
+            max-width: 900px;
+        }
+        .hero .hero-content .badge {
+            display: inline-block;
+            background: rgba(232, 73, 29, 0.2);
+            border: 1px solid rgba(232, 73, 29, 0.4);
+            color: var(--accent);
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .hero .hero-content h1 {
+            font-size: 4.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 32px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .hero .hero-content .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+        .hero .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: bounce-down 2s infinite;
+        }
+        .hero .scroll-indicator i {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        @keyframes bounce-down {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* ============================================================
+               LEADERSHIP / PRESIDENT IMAGES
+            ============================================================ */
+        .leadership {
+            background: var(--primary);
+            padding: 60px 0;
+        }
+        .leadership .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .leadership .leader-card {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+        }
+        .leadership .leader-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 166, 35, 0.3);
+            box-shadow: var(--shadow-light);
+        }
+        .leadership .leader-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 3px solid rgba(245, 166, 35, 0.2);
+            transition: var(--transition);
+        }
+        .leadership .leader-card:hover img {
+            border-color: var(--gold);
+            transform: scale(1.04);
+        }
+        .leadership .leader-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .leadership .leader-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ============================================================
+               CHAMPIONSHIP SECTION
+            ============================================================ */
+        .championship {
+            background: linear-gradient(180deg, var(--primary-dark), var(--primary));
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .championship::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 73, 29, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .championship .champ-banner {
+            background: linear-gradient(135deg, rgba(232, 73, 29, 0.12), rgba(245, 166, 35, 0.08));
+            border: 1px solid rgba(245, 166, 35, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .championship .champ-banner::after {
+            content: '🏆';
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            font-size: 12rem;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+        .championship .champ-banner h2 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .championship .champ-banner h2 .highlight {
+            color: var(--gold);
+        }
+        .championship .champ-banner .champ-sub {
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .championship .champ-banner p {
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .championship .champ-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .championship .champ-stats .stat {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 24px 16px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .championship .champ-stats .stat:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        .championship .champ-stats .stat .number {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+        }
+        .championship .champ-stats .stat .label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* ============================================================
+               MEDIA COVERAGE CARDS
+            ============================================================ */
+        .media-section {
+            background: var(--primary-dark);
+            padding: 80px 0;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .media-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .media-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 166, 35, 0.3);
+            box-shadow: var(--shadow-light);
+        }
+        .media-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .media-card:hover img {
+            transform: scale(1.03);
+        }
+        .media-card .body {
+            padding: 20px 24px 24px;
+        }
+        .media-card .body h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .media-card .body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .media-card .body .tag {
+            display: inline-block;
+            background: rgba(232, 73, 29, 0.15);
+            color: var(--accent);
+            padding: 2px 14px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* ============================================================
+               GALLERY
+            ============================================================ */
+        .gallery-section {
+            background: var(--primary);
+            padding: 80px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery-grid .g-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+        }
+        .gallery-grid .g-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-grid .g-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-grid .g-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(5, 13, 26, 0.9));
+            color: var(--white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        .gallery-grid .g-item:hover .overlay {
+            transform: translateY(0);
+        }
+        .gallery-grid .g-item .overlay h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .gallery-grid .g-item .overlay p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .gallery-section .view-more-wrap {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* ============================================================
+               VIDEOS
+            ============================================================ */
+        .video-section {
+            background: var(--primary-dark);
+            padding: 80px 0;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .video-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 166, 35, 0.2);
+            box-shadow: var(--shadow-light);
+        }
+        .video-card .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-card .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ============================================================
+               TESTIMONIALS
+            ============================================================ */
+        .testimonials {
+            background: var(--primary);
+            padding: 80px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+            position: relative;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 166, 35, 0.2);
+        }
+        .testimonial-card .quote-icon {
+            color: var(--gold);
+            font-size: 2rem;
+            opacity: 0.3;
+            margin-bottom: 12px;
+        }
+        .testimonial-card .content {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-card .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(245, 166, 35, 0.2);
+        }
+        .testimonial-card .author .name {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1rem;
+        }
+        .testimonial-card .author .role {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .testimonial-card .stars {
+            color: var(--gold);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* ============================================================
+               PARTNERS / SPONSORS
+            ============================================================ */
+        .partners {
+            background: var(--primary-dark);
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .partners .logo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px 60px;
+            margin-top: 30px;
+        }
+        .partners .logo-grid img {
+            max-height: 60px;
+            width: auto;
+            opacity: 0.6;
+            transition: var(--transition);
+            filter: grayscale(0.4);
+        }
+        .partners .logo-grid img:hover {
+            opacity: 1;
+            filter: grayscale(0);
+            transform: scale(1.06);
+        }
+
+        /* ============================================================
+               PROGRAMS / PROJECTS
+            ============================================================ */
+        .programs {
+            background: var(--primary);
+            padding: 80px 0;
+        }
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .program-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+        }
+        .program-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 166, 35, 0.25);
+            box-shadow: var(--shadow-light);
+        }
+        .program-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .program-card .body {
+            padding: 24px;
+        }
+        .program-card .body h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        .program-card .body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        .program-card .body .btn {
+            margin-top: 16px;
+            padding: 10px 28px;
+            font-size: 0.8rem;
+        }
+
+        /* ============================================================
+               FOOTER
+            ============================================================ */
+        .main-footer {
+            background: var(--primary-dark);
+            padding: 60px 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .main-footer .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .main-footer .footer-grid .brand h3 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .main-footer .footer-grid .brand h3 span {
+            color: var(--gold);
+        }
+        .main-footer .footer-grid .brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+        .main-footer .footer-grid .brand .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .main-footer .footer-grid .brand .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .main-footer .footer-grid .brand .social-links a:hover {
+            background: rgba(245, 166, 35, 0.15);
+            color: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .main-footer .footer-grid .col h4 {
+            color: var(--white);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .main-footer .footer-grid .col ul {
+            list-style: none;
+        }
+        .main-footer .footer-grid .col ul li {
+            margin-bottom: 10px;
+        }
+        .main-footer .footer-grid .col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .main-footer .footer-grid .col ul li a:hover {
+            color: var(--gold);
+            transform: translateX(4px);
+        }
+        .main-footer .footer-grid .col ul li a i {
+            font-size: 0.6rem;
+            color: var(--accent);
+        }
+
+        .main-footer .footer-grid .contact-col li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .main-footer .footer-grid .contact-col li i {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-top: 3px;
+            width: 20px;
+            text-align: center;
+        }
+        .main-footer .footer-grid .contact-col li a {
+            color: var(--text-muted);
+        }
+        .main-footer .footer-grid .contact-col li a:hover {
+            color: var(--gold);
+        }
+
+        .main-footer .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .main-footer .footer-bottom a {
+            color: var(--text-muted);
+        }
+        .main-footer .footer-bottom a:hover {
+            color: var(--gold);
+        }
+        .main-footer .footer-bottom .heart {
+            color: var(--accent);
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* ============================================================
+               RESPONSIVE
+            ============================================================ */
+        @media (max-width: 1024px) {
+            .main-footer .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero .hero-content h1 {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar .container {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+            .top-bar-left {
+                justify-content: center;
+                gap: 14px;
+                font-size: 0.75rem;
+            }
+            .top-bar-right .live-btn {
+                padding: 4px 16px;
+                font-size: 0.65rem;
+            }
+
+            .main-header .container {
+                padding: 8px 16px;
+            }
+            .main-header .logo img {
+                height: 44px;
+            }
+            .main-header .logo-text {
+                font-size: 0.9rem;
+            }
+            .main-header .logo-text span {
+                font-size: 0.55rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 22, 40, 0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 16px 24px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                transform: translateY(-120%);
+                transition: var(--transition);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .main-nav.open {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 4px;
+            }
+            .main-nav ul li {
+                width: 100%;
+            }
+            .main-nav ul li a {
+                padding: 12px 16px;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .main-nav ul li .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.04);
+                border-radius: 8px;
+                padding: 4px 0;
+                margin: 4px 0 4px 16px;
+                display: none;
+                min-width: auto;
+            }
+            .main-nav ul li:hover .dropdown {
+                display: none;
+            }
+            .main-nav ul li .dropdown.open {
+                display: block;
+            }
+            .main-nav ul li .dropdown li a {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+            }
+            .main-nav .donate-btn {
+                margin-left: 0;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 60vh;
+            }
+            .hero .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .hero .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            .championship .champ-banner {
+                padding: 28px 20px;
+            }
+            .championship .champ-banner h2 {
+                font-size: 1.8rem;
+            }
+            .championship .champ-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .main-footer .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .main-footer .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .programs-grid,
+            .testimonial-grid,
+            .video-grid,
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .leadership .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero .hero-content .btn-group .btn {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .leadership .grid {
+                grid-template-columns: 1fr;
+            }
+            .championship .champ-stats {
+                grid-template-columns: 1fr;
+            }
+            .partners .logo-grid {
+                gap: 20px 30px;
+            }
+            .partners .logo-grid img {
+                max-height: 40px;
+            }
+        }
+
+        /* ============================================================
+               UTILITY
+            ============================================================ */
+        .text-gold {
+            color: var(--gold);
+        }
+        .text-accent {
+            color: var(--accent);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        .gap-8 {
+            gap: 8px;
+        }
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: var(--primary-dark);
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--primary-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold);
+        }
+
+        /* smooth reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+    TOP BAR
+    ============================================================ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="#"><i class="fas fa-sticky-note"></i> REG NO. - U74999UP2018NPL100302</a>
+                <a href="mailto:office@wcia.tv"><i class="far fa-envelope"></i> office@wcia.tv</a>
+                <a href="tel:7007056067"><i class="fas fa-phone-alt"></i> (+91) 7007056067</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://www.facebook.com/wccricketindia/" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/wcia_official" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/wheelchair-cricket-india-association-10930016b/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wcia.official/" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@wcia.official" target="_blank" class="live-btn"><i class="fas fa-circle" style="color:#ff0000;font-size:0.5rem;"></i> Watch Live</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    HEADER / NAV
+    ============================================================ -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="https://wcia.tv/wp-content/uploads/2021/10/WCIA-logo-1-scaled.png" alt="WCIA Logo" loading="lazy" />
+                <div class="logo-text">
+                    WHEELCHAIR CRICKET INDIA
+                    <span>Association</span>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li>
+                        <a href="about.html">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="about.html#team">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+                            <li><a href="video-gallery.html">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sewa-niketan.html">Sewa Niketan</a></li>
+                    <li>
+                        <a href="get-involved.html">Get Involved <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="pay-online.html">Pay Online</a></li>
+                            <li><a href="registration-details.html">Registration Details</a></li>
+                            <li><a href="membership-renewal.html">Membership Renewal</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="campaigns.html">Our Campaigns <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="drive-with-ability.html">Drive With Ability</a></li>
+                            <li><a href="ladakh-expedition.html">Ladakh Expedition</a></li>
+                            <li><a href="notice-karo-india.html">#NoticeKaroIndia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="donate.html" class="donate-btn"><i class="fas fa-heart" style="color:#ff6b6b;margin-right:6px;"></i> Donate Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <section class="hero" id="hero">
+        <!-- Video background -->
+        <div class="video-placeholder" style="background:linear-gradient(135deg,#0a1628,#1a2a4a);"></div>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-play-circle"></i> #ResilienceInMotion2026</div>
+            <h1>Wheelchair Cricket<br />India Association</h1>
+            <p>Empowering ability beyond disability — 80G-approved non-profit, active in 20+ states with 1000+ players. Join the movement that's changing lives through the spirit of cricket.</p>
+            <div class="btn-group">
+                <a href="campaigns.html" class="btn btn-primary"><i class="fas fa-trophy"></i> Explore Events</a>
+                <a href="get-involved.html" class="btn btn-secondary"><i class="fas fa-users"></i> Join Us</a>
+                <a href="donate.html" class="btn btn-gold"><i class="fas fa-donate"></i> Donate Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    LEADERSHIP
+    ============================================================ -->
+    <section class="leadership reveal">
+        <div class="container">
+            <h2 class="section-title">Our <span class="highlight">Leadership</span></h2>
+            <p class="section-subtitle">The visionaries driving wheelchair cricket across India.</p>
+            <div class="grid">
+                <div class="leader-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/01/Rajesh-ji-1024x1024.png" alt="Rajesh ji" loading="lazy" />
+                    <h4>Rajesh Kumar</h4>
+                    <p>Secretary, WCIA</p>
+                </div>
+                <div class="leader-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/01/President-Abhai-Sir-1.png" alt="Abhai Sir" loading="lazy" />
+                    <h4>Abhai Singh</h4>
+                    <p>President, WCIA</p>
+                </div>
+                <div class="leader-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-09-at-6.04.38-PM-1024x1024.jpeg" alt="WCIA Team" loading="lazy" />
+                    <h4>Team WCIA</h4>
+                    <p>Champions of Change</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CHAMPIONSHIP
+    ============================================================ -->
+    <section class="championship reveal">
+        <div class="container">
+            <div class="champ-banner">
+                <h2>5TH NATIONAL WHEELCHAIR CRICKET <span class="highlight">CHAMPIONSHIP 2026</span></h2>
+                <div class="champ-sub"><i class="fas fa-trophy" style="color:var(--gold);"></i> Uttar Pradesh — Crowned Champions</div>
+                <p>Uttar Pradesh emerged as the champions of the 5th National Wheelchair Cricket Championship 2026 after a thrilling Mega Finale against Haryana. Displaying exceptional teamwork, determination, and fighting spirit, Uttar Pradesh secured a memorable 5-run victory to lift the prestigious title.</p>
+                <p style="margin-top:12px;">The championship witnessed outstanding performances from players across the country and highlighted the spirit of resilience, inclusion, and excellence in Wheelchair Cricket. The tournament concluded on a grand note, celebrating the growing movement of adaptive sports in India.</p>
+
+                <div class="champ-stats">
+                    <div class="stat">
+                        <span class="number">20+</span>
+                        <span class="label">States Active</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">1000+</span>
+                        <span class="label">Players</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">5</span>
+                        <span class="label">National Championships</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">3-0</span>
+                        <span class="label">Friendship Cup Win</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CHAMPIONSHIP IMAGE BANNER
+    ============================================================ -->
+    <section class="media-section reveal" style="padding-top:0;">
+        <div class="container">
+            <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(255,255,255,0.06);">
+                <img src="https://wcia.tv/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-16-at-5.05.14-PM.jpeg" alt="Championship 2026" loading="lazy" style="width:100%;height:auto;display:block;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    ZONE WINNERS
+    ============================================================ -->
+    <section class="media-section reveal" style="background:var(--primary);padding-top:0;">
+        <div class="container">
+            <h2 class="section-title">Zone <span class="highlight">Winners</span></h2>
+            <p class="section-subtitle">The journey to the Super 5 has been defined by dominance and determination.</p>
+            <div style="background:rgba(255,255,255,0.04);border-radius:var(--radius);padding:32px;border:1px solid rgba(255,255,255,0.06);">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;">
+                    <div><span style="display:block;font-size:2rem;">🏏</span><strong style="color:var(--gold);">Andhra Pradesh</strong><br /><span style="color:var(--text-muted);font-size:0.85rem;">East Zone Winner</span></div>
+                    <div><span style="display:block;font-size:2rem;">🏏</span><strong style="color:var(--gold);">Mumbai</strong><br /><span style="color:var(--text-muted);font-size:0.85rem;">West Zone Winner</span></div>
+                    <div><span style="display:block;font-size:2rem;">🏏</span><strong style="color:var(--gold);">Uttar Pradesh</strong><br /><span style="color:var(--text-muted);font-size:0.85rem;">Central Zone Winner</span></div>
+                    <div><span style="display:block;font-size:2rem;">🏏</span><strong style="color:var(--gold);">Karnataka</strong><br /><span style="color:var(--text-muted);font-size:0.85rem;">South Zone Winner</span></div>
+                </div>
+                <p style="text-align:center;color:var(--text-muted);margin-top:24px;font-size:0.95rem;font-weight:300;">The final spot remains open — North Zone winner joins after concluding league matches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    MEDIA COVERAGE CARDS
+    ============================================================ -->
+    <section class="media-section reveal">
+        <div class="container">
+            <h2 class="section-title">Media <span class="highlight">Coverage</span></h2>
+            <p class="section-subtitle">As featured in leading publications across India.</p>
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/02/1280x540-4th-NAtional.png" alt="4th National Championship" loading="lazy" />
+                    <div class="body">
+                        <h4>4th National Wheelchair Cricket Championship</h4>
+                        <p>Poster launched in Gwalior — a grand celebration of ability.</p>
+                        <span class="tag">Udaipur Times</span>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2022/09/Poster-launch.jpg" alt="3rd National Championship" loading="lazy" />
+                    <div class="body">
+                        <h4>3rd National Wheelchair Cricket Championship</h4>
+                        <p>Poster launched in Udaipur, setting the stage for greatness.</p>
+                        <span class="tag">Udaipur Times</span>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2022/09/photo1660729222-6.jpeg" alt="Ladakh Expedition" loading="lazy" />
+                    <div class="body">
+                        <h4>Ladakh Expedition led by Divyangjan</h4>
+                        <p>DCCI joins the historic expedition from Delhi to Ladakh.</p>
+                        <span class="tag">The Print</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    GALLERY
+    ============================================================ -->
+    <section class="gallery-section reveal">
+        <div class="container">
+            <h2 class="section-title">Photo <span class="highlight">Gallery</span></h2>
+            <p class="section-subtitle">Moments that capture the spirit of wheelchair cricket.</p>
+            <div class="gallery-grid">
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/2nd-National-Wheelchair-Cricket-Championship-300x200.jpg" alt="2nd National Championship" loading="lazy" />
+                    <div class="overlay"><h5>2nd National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-12.26.25-PM-1-300x200.jpeg" alt="4th National Championship" loading="lazy" />
+                    <div class="overlay"><h5>4th National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1548129008-IMG-20170120-WA0008-300x225.jpg" alt="Bangalore April 2017" loading="lazy" />
+                    <div class="overlay"><h5>Bangalore April 2017</h5><p>Tamilnadu, UP, Karnataka</p></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1548129821-IMG-20170116-WA0015-300x170.jpg" alt="General" loading="lazy" />
+                    <div class="overlay"><h5>General</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1554744967-IMG_9791-300x200.jpg" alt="2nd National Championship" loading="lazy" />
+                    <div class="overlay"><h5>2nd National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/Ind-vs-Pakistan-300x200.jpg" alt="Ind vs Pakistan" loading="lazy" />
+                    <div class="overlay"><h5>Ind vs Pakistan</h5></div>
+                </div>
+            </div>
+            <div class="view-more-wrap">
+                <a href="photo-gallery.html" class="btn btn-secondary"><i class="fas fa-images"></i> View More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    VIDEOS
+    ============================================================ -->
+    <section class="video-section reveal">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Videos</span></h2>
+            <p class="section-subtitle">Watch the action, the emotion, and the inspiration.</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6csW99nAjsQ" title="WCIA Video 1" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/aSIIeoTgZZc" title="WCIA Video 2" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6SiQrpj2cQM" title="WCIA Video 3" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8BOXCCtPUlc" title="WCIA Video 4" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    TESTIMONIALS
+    ============================================================ -->
+    <section class="testimonials reveal">
+        <div class="container">
+            <h2 class="section-title">What People <span class="highlight">Say</span></h2>
+            <p class="section-subtitle">Voices of support from across the nation and beyond.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"Congratulations to the Wheelchair Cricket Team of India for winning the Friendship Cup by clean sweep of 3-0 against Pakistan at UAE in T-20 Series."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/Harbhajan-Singh.webp" alt="Harbhajan Singh" loading="lazy" />
+                        <div><div class="name">Harbhajan Singh</div><div class="role">Former Indian Cricketer</div></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"दूसरे अन्तराष्ट्रीय T-20 व्हीलचेयर क्रिकेट सीरीज को जीत कर भारतीय दिव्यांग टीम ने देश को गौरवान्वित किया है. उनकी प्रबल इच्छाशक्ति पूरे देश के लिए मिसाल बनी है."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/2-2.jpg" alt="Shri Krishan Pal Gurjar" loading="lazy" />
+                        <div><div class="name">Shri Krishan Pal Gurjar</div><div class="role">Minister of State, Government of India</div></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"I congratulate the Indian Wheelchair Cricket Team on its convincing win over Bangladesh in the 2nd International T-20 Wheelchair Cricket Match at Dhaka."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/1-2.jpg" alt="Shri Thawar Chand Gehlot" loading="lazy" />
+                        <div><div class="name">Shri Thawar Chand Gehlot</div><div class="role">Hon'ble Governor of Karnataka</div></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"Congratulations to the Indian Wheelchair Cricket Team for their big win on Day 1 of the Friendship Cup."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/US-Consulate-Mumbai.jpg" alt="US Consulate" loading="lazy" />
+                        <div><div class="name">US Consulate</div><div class="role">Mumbai</div></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"Team India didn't just win the India-Pakistan Wheelchair Cricket Series 2018, but won all our hearts too. The champions never back down."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/The-Muthoot-Group.png" alt="The Muthoot Group" loading="lazy" />
+                        <div><div class="name">The Muthoot Group</div><div class="role">Official Partner</div></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="content">"I would like to congratulate WCIA for organising this India-Pakistan Wheelchair Cricket Series in UAE, it's a wonderful cause."</div>
+                    <div class="author">
+                        <img src="https://wcia.tv/wp-content/uploads/2022/09/Misbah-Ul-Haq.webp" alt="Misbah-Ul-Haq" loading="lazy" />
+                        <div><div class="name">Misbah-Ul-Haq</div><div class="role">Former Pakistani Cricketer</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PROGRAMS / PROJECTS
+    ============================================================ -->
+    <section class="programs reveal">
+        <div class="container">
+            <h2 class="section-title">Our <span class="highlight">Programs</span></h2>
+            <p class="section-subtitle">Driving change through focused initiatives that empower lives.</p>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/WCIA-Motivation-3-768x959-1.jpg" alt="Breaking Barriers" loading="lazy" />
+                    <div class="body">
+                        <h4>Breaking Barriers</h4>
+                        <p>Organizing domestic and international wheelchair cricket tournaments to provide a competitive platform and promote national pride through inclusive sports.</p>
+                        <a href="get-involved.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Join Us</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/021.jpg" alt="Wheels of Freedom" loading="lazy" />
+                    <div class="body">
+                        <h4>Wheels of Freedom</h4>
+                        <p>Providing high-performance sports wheelchairs to promising cricketers across India to enhance performance and ensure participation in national and international competitions.</p>
+                        <a href="get-involved.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Join Us</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/032.jpg" alt="National Training Camp" loading="lazy" />
+                    <div class="body">
+                        <h4>National Training Camp</h4>
+                        <p>Identifying, training, and nurturing talented PwDs in wheelchair cricket through structured national-level camps focusing on skill development, fitness, and team building.</p>
+                        <a href="get-involved.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Join Us</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/0245-1024x724.jpg" alt="Rehabilitation Centers" loading="lazy" />
+                    <div class="body">
+                        <h4>Accessible Rehabilitation Centers</h4>
+                        <p>Empowering differently abled individuals through focused rehabilitation programs that restore confidence, mobility, and purpose through physical therapy and community reintegration.</p>
+                        <a href="sewa-niketan.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/214-1024x724.jpg" alt="Sports Center Lucknow" loading="lazy" />
+                    <div class="body">
+                        <h4>Sports Center, Lucknow</h4>
+                        <p>A dedicated rehabilitation center under Sewa Niketan providing accessible physiotherapy, psychological support, and vocational counseling for persons with disabilities.</p>
+                        <a href="sewa-niketan.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/05/Talent-Beyond-Limits-1-1024x724.jpg" alt="Disability Sports Training Centre" loading="lazy" />
+                    <div class="body">
+                        <h4>Disability Sports Training Centre</h4>
+                        <p>Establishing a dedicated training centre for persons with disabilities with a focus on physiotherapy, psychological support, and vocational counseling to empower 100+ beneficiaries annually.</p>
+                        <a href="get-involved.html" class="btn btn-primary" style="padding:10px 28px;font-size:0.8rem;">Join Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PARTNERS / SPONSORS
+    ============================================================ -->
+    <section class="partners reveal">
+        <div class="container">
+            <h2 class="section-title" style="font-size:2rem;">Our <span class="highlight">Partners &amp; Sponsors</span></h2>
+            <div class="logo-grid">
+                <img src="https://wcia.tv/wp-content/uploads/2025/02/png-logo-aspire.png" alt="Aspire" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2021/10/ajman.png" alt="Ajman" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2021/10/ajman-2.png" alt="Ajman 2" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2021/10/ajman-1.png" alt="Ajman 1" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/sawa-nikatan.png" alt="Sewa Niketan" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/aqualite.png" alt="Aqualite" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/apl.png" alt="APL" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/jaiprakash.png" alt="Jaiprakash" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/nss.png" alt="NSS" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/payomatix.png" alt="Payomatix" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/svayam.png" alt="Svayam" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/GEEDEE.png" alt="GEEDEE" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/LGHF.png" alt="LGHF" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/MMC.png" alt="MMC" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/SURYA.png" alt="SURYA" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/100-sports.png" alt="100 Sports" loading="lazy" />
+                <img src="https://wcia.tv/wp-content/uploads/2025/01/radio-city.png" alt="Radio City" loading="lazy" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <h3>WCIA</h3>
+                    <p>Wheelchair Cricket India Association — an 80G-approved non-profit dedicated to empowering persons with disabilities through the spirit of cricket.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/wccricketindia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/wcia_official" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/wheelchair-cricket-india-association-10930016b/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wcia.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@wcia.official" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="registration.html"><i class="fas fa-angle-right"></i> Registration</a></li>
+                        <li><a href="pay-online.html"><i class="fas fa-angle-right"></i> Pay Online</a></li>
+                        <li><a href="registration-details.html"><i class="fas fa-angle-right"></i> Registration Details</a></li>
+                        <li><a href="membership-renewal.html"><i class="fas fa-angle-right"></i> Membership Renewal</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="blog.html"><i class="fas fa-angle-right"></i> Blog</a></li>
+                        <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col contact-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Regd Add: 16A, Kh. No.. 517, Ganeshpur Rehmanpur, Chinhut, Lucknow- 226028</li>
+                        <li><i class="fas fa-location-dot"></i> Corp. Add: B2/919, DLF MyPad, Vibhuti Khand, Gomti Nagar, Lucknow- 226010</li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:7007056067">(+91) 7007056067 (PRESIDENT)</a></li>
+                        <li><i class="fas fa-phone-alt"></i> (+91) 8765097543 (OFFICE)</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:office@wcia.tv">office@wcia.tv</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://wcia.tv" target="_blank">www.wcia.tv</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Wheelchair Cricket India Association. All rights reserved.</span>
+                <span>Design With <i class="fas fa-heart heart"></i> By <a href="https://codingclave.tech/" target="_blank">Codingclave Technologies</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        /* ============================================================
+               HAMBURGER TOGGLE
+            ============================================================ */
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+
+        // Close nav on link click (mobile)
+        document.querySelectorAll('.main-nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const dropdown = this.nextElementSibling;
+                if (dropdown && dropdown.classList.contains('dropdown')) {
+                    // If on mobile, toggle dropdown
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('open');
+                    }
+                } else {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        mainNav.classList.remove('open');
+                    }
+                }
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                const header = document.getElementById('mainHeader');
+                if (!header.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mainNav.classList.remove('open');
+                }
+            }
+        });
+
+        /* ============================================================
+               SCROLL REVEAL (Intersection Observer)
+            ============================================================ */
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        /* ============================================================
+               STICKY HEADER SHADOW
+            ============================================================ */
+        const header = document.getElementById('mainHeader');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 80) {
+                header.style.boxShadow = '0 4px 40px rgba(0,0,0,0.6)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            lastScroll = currentScroll;
+        });
+
+        /* ============================================================
+               HERO VIDEO PLACEHOLDER — replace with actual if needed
+            ============================================================ */
+        // If you want to embed a real YouTube video as hero background:
+        // You can replace the .video-placeholder with an iframe or video tag.
+        // For now it's a gradient.
+
+        /* ============================================================
+               COUNTER ANIMATION (optional)
+            ============================================================ */
+        const statNumbers = document.querySelectorAll('.champ-stats .stat .number');
+        // simple static display — they already show values
+
+        console.log('🚀 WCIA — Wheelchair Cricket India Association fully loaded.');
+        console.log('📌 Design inspired by IPL aesthetics. All content preserved.');
+        console.log('❤️  #ResilienceInMotion2026');
+    </script>
+
+</body>
+</html>

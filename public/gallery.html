@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .gallery-hero { background: var(--primary-dark); padding: 80px 0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gallery-hero h1 { font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, var(--white), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gallery-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .gallery-options .card { background: rgba(255,255,255,0.04); border-radius: var(--radius); padding: 40px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.06); transition: var(--transition); }
+        .gallery-options .card:hover { transform: translateY(-8px); border-color: var(--gold); }
+        .gallery-options .card i { font-size: 3rem; color: var(--gold); margin-bottom: 16px; }
+        .gallery-options .card h3 { color: var(--white); font-weight: 700; }
+        .gallery-options .card p { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <!-- TOP BAR & HEADER (copy from index) -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our <span style="color:var(--gold);">Gallery</span></h1>
+            <p style="color:var(--text-muted); max-width:600px; margin:16px auto;">Explore moments of inspiration, action, and triumph.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:var(--primary);">
+        <div class="container">
+            <div class="gallery-options">
+                <a href="/photo-gallery.html" style="text-decoration:none; color:inherit;">
+                    <div class="card"><i class="fas fa-images"></i><h3>Photo Gallery</h3><p>Captured moments from tournaments, training, and events.</p></div>
+                </a>
+                <a href="/video-gallery.html" style="text-decoration:none; color:inherit;">
+                    <div class="card"><i class="fas fa-video"></i><h3>Video Gallery</h3><p>Watch the action in motion, highlights, and interviews.</p></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

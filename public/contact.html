@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 40px; }
+        .contact-info { background: rgba(255,255,255,0.04); padding: 40px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06); }
+        .contact-info h3 { color: var(--white); margin-bottom: 20px; }
+        .contact-info p { color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+        .contact-info i { color: var(--gold); width: 24px; text-align: center; }
+        .contact-form { background: rgba(255,255,255,0.04); padding: 40px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06); }
+        .contact-form .form-group { margin-bottom: 20px; }
+        .contact-form .form-group label { display: block; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+        .contact-form .form-group input, .contact-form .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; }
+        .contact-form .form-group input:focus, .contact-form .form-group textarea:focus { border-color: var(--gold); }
+        .contact-form .form-group .btn { width: 100%; }
+        #contactResponse { margin-top: 20px; text-align: center; }
+        @media (max-width:768px) { .contact-grid { grid-template-columns: 1fr; gap: 30px; } }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="section-padding" style="background:var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+            <p class="section-subtitle">We would love to hear from you. Drop us a message.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Regd Add: 16A, Kh. No.. 517, Ganeshpur Rehmanpur, Chinhut, Lucknow- 226028</p>
+                    <p><i class="fas fa-location-dot"></i> Corp. Add: B2/919, DLF MyPad, Vibhuti Khand, Gomti Nagar, Lucknow- 226010</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:7007056067">(+91) 7007056067</a> (President)</p>
+                    <p><i class="fas fa-phone-alt"></i> (+91) 8765097543 (Office)</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:office@wcia.tv">office@wcia.tv</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://wcia.tv" target="_blank">www.wcia.tv</a></p>
+                </div>
+                <div class="contact-form">
+                    <h3 style="color:var(--white); margin-bottom:20px;">Send a Message</h3>
+                    <form id="contactForm" onsubmit="handleContact(event)">
+                        <div class="form-group">
+                            <label for="contactName">Name *</label>
+                            <input type="text" id="contactName" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" placeholder="your@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone</label>
+                            <input type="tel" id="contactPhone" placeholder="+91 9876543210" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="Subject" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Your message..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        </div>
+                    </form>
+                    <div id="contactResponse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script>
+        async function handleContact(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = {
+                name: form.contactName.value,
+                email: form.contactEmail.value,
+                phone: form.contactPhone.value,
+                subject: form.contactSubject.value,
+                message: form.contactMessage.value
+            };
+            const result = await window.submitForm('/api/contact', data);
+            const resp = document.getElementById('contactResponse');
+            if (result.success) {
+                resp.innerHTML = '<span style="color:var(--gold);"><i class="fas fa-check-circle"></i> Message sent! We\'ll get back to you soon.</span>';
+                form.reset();
+            } else {
+                resp.innerHTML = '<span style="color:var(--accent);"><i class="fas fa-exclamation-circle"></i> ' + (result.error || 'Error sending message.') + '</span>';
+            }
+        }
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

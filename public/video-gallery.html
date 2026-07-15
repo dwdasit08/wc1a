@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Gallery | WCIA</title>
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .video-grid .vid { background: rgba(255,255,255,0.04); border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: var(--transition); }
+        .video-grid .vid:hover { transform: translateY(-4px); border-color: var(--gold); }
+        .video-grid .vid .wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-grid .vid .wrapper iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:none; }
+        .video-grid .vid .title { padding: 16px; color: var(--text-light); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <section class="section-padding" style="background:var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Video <span class="highlight">Gallery</span></h2>
+            <p class="section-subtitle">Watch the spirit of wheelchair cricket in motion.</p>
+            <div class="video-grid">
+                <div class="vid"><div class="wrapper"><iframe src="https://www.youtube.com/embed/6csW99nAjsQ" title="WCIA 1" allowfullscreen></iframe></div><div class="title">WCIA Highlights 1</div></div>
+                <div class="vid"><div class="wrapper"><iframe src="https://www.youtube.com/embed/aSIIeoTgZZc" title="WCIA 2" allowfullscreen></iframe></div><div class="title">Friendship Cup</div></div>
+                <div class="vid"><div class="wrapper"><iframe src="https://www.youtube.com/embed/6SiQrpj2cQM" title="WCIA 3" allowfullscreen></iframe></div><div class="title">National Championship</div></div>
+                <div class="vid"><div class="wrapper"><iframe src="https://www.youtube.com/embed/8BOXCCtPUlc" title="WCIA 4" allowfullscreen></iframe></div><div class="title">Inspirational Stories</div></div>
+            </div>
+            <div style="text-align:center; margin-top:40px;"><a href="/gallery.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Gallery</a></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>
